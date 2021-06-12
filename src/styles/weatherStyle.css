@@ -1,0 +1,12 @@
+.temp_n_weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 40%;
+  width: auto;
+}
+
+.temp_n_weather span {
+  font-size: 2rem;
+  font-weight: bolder;
+}
