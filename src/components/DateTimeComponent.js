@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import "../styles/dateStyle.css";
+import "../styles/dateStyle.css"; // style file from styles folder
 
 class dateTimeComponent extends Component {
   constructor(props) {
     super(props);
 
+    // months list to render their name
     let months = [
       "Jan",
       "Feb",
@@ -20,8 +21,10 @@ class dateTimeComponent extends Component {
       "Dec",
     ];
 
+    // getting today's date
     let today = new Date();
 
+    // defining the date in required format
     let date =
       today.getDate() +
       " " +
@@ -29,9 +32,10 @@ class dateTimeComponent extends Component {
       " " +
       today.getFullYear();
 
-    let hrs = today.getHours();
-    let mins = today.getMinutes();
-    let meridian = "AM";
+    // deifining time in required format
+    let hrs = today.getHours(); // hours
+    let mins = today.getMinutes(); // minutes
+    let meridian = "AM"; // meridian
 
     if (hrs > 12) {
       hrs = hrs - 12;
@@ -40,6 +44,7 @@ class dateTimeComponent extends Component {
 
     let time = hrs + ":" + mins + " " + meridian;
 
+    // setting the state
     this.state = {
       date: date,
       time: time,
@@ -49,10 +54,11 @@ class dateTimeComponent extends Component {
   render() {
     const { date, time } = this.state;
     return (
+      // rendering date and time
       <div>
         <h2 className="date">
-          <i class="far fa-calendar-alt"></i> {date}{" "}
-          <i class="far fa-clock"></i> {time}
+          <i class="far fa-calendar-alt icons"></i> {date}{" "}
+          <i class="far fa-clock icons"></i> {time}
         </h2>
       </div>
     );

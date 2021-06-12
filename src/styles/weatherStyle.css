@@ -1,12 +1,55 @@
+.wind_n_humidity {
+  color: white;
+}
+
+.wind_icon {
+  color: blueviolet;
+}
+
+.humidity_icon {
+  color: blue;
+}
+
+.temp_icon {
+  color: black;
+}
+
 .temp_n_weather {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 40%;
+  margin: 0 36%;
   width: auto;
 }
 
-.temp_n_weather span {
-  font-size: 2rem;
+.min_max_temp {
+  font-size: 1.25rem;
   font-weight: bolder;
+}
+
+.max_temp {
+  color: red;
+}
+
+.min_temp {
+  color: green;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+}
+
+.weather p {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.more {
+  margin: 0 38%;
+}
+
+.more p {
+  font-size: 1.25rem;
+  font-family: cursive;
 }

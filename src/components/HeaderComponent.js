@@ -6,9 +6,14 @@ import WeatherComponent from "./WeatherComponent";
 function headerComponent(props) {
   return (
     <div>
+      {/* name rendering */}
       <NameComponent />
+
+      {/* date and time rendering */}
       <DateTimeComponent />
-      <WeatherComponent />
+
+      {/* weather details rendering */}
+      <WeatherComponent data={props} />
     </div>
   );
 }
