@@ -69,13 +69,6 @@ function ChartComponent(props) {
           responsive: true,
           pointStyle: "rectRounded",
           radius: 10,
-          tooltips: {
-            callbacks: {
-              afterBody: function (t, d) {
-                return "loss 15%"; //return a string that you wish to append
-              },
-            },
-          },
         }}
         className="chart"
       />
