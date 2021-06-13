@@ -25,6 +25,11 @@ function WeatherComponent(props) {
     return value < 10 ? "0" + value : value;
   }
 
+  // function to get meridian
+  function getMeridian(hours) {
+    return hours < 12 ? "AM" : "PM";
+  }
+
   return (
     <div>
       {/* wind , humidity and current temperature */}
@@ -69,11 +74,13 @@ function WeatherComponent(props) {
           <p>Pressure: {pressure} hPa</p>
           <p>
             Sunrise Time: {addZero(sunrise_time.getHours())} :{" "}
-            {addZero(sunrise_time.getMinutes())} AM
+            {addZero(sunrise_time.getMinutes())}{" "}
+            {getMeridian(sunrise_time.getHours())}
           </p>
           <p>
             Sunset Time: {addZero(sunset_time.getHours() - 12)} :{" "}
-            {addZero(sunset_time.getMinutes())} PM
+            {addZero(sunset_time.getMinutes())}{" "}
+            {getMeridian(sunset_time.getHours())}
           </p>
         </div>
       </div>

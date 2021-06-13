@@ -1,0 +1,15 @@
+.chart_area {
+  margin: 2% 5%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+.chart {
+  margin: 2% 5%;
+}

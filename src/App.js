@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios"; // for http request
 
 import HeaderComponent from "./components/HeaderComponent";
+import ChartComponent from "./components/ChartComponent";
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class App extends Component {
       pressure: 0,
       sunrise: 0,
       sunset: 0,
+      daily_forecast: [],
     };
   }
 
@@ -38,10 +40,11 @@ class App extends Component {
           max_temp: response.data.daily[0].temp.max,
           min_temp: response.data.daily[0].temp.min,
           weather_icon: response.data.current.weather[0].icon,
-          weather_type: response.data.current.weather[0].main,
+          weather_type: response.data.current.weather[0].description,
           pressure: response.data.current.pressure,
           sunrise: response.data.current.sunrise,
           sunset: response.data.current.sunset,
+          daily_forecast: response.data.daily,
         });
       })
       .catch((err) => {
@@ -55,6 +58,9 @@ class App extends Component {
       <div className="App">
         {/* header component (containing basic details)*/}
         <HeaderComponent data={this.state} />
+
+        {/* Chart for next 7 days forecast */}
+        <ChartComponent data={this.state} />
       </div>
     );
   }

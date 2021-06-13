@@ -2,6 +2,12 @@
   color: white;
 }
 
+@media screen and (max-width: 550px) {
+  .wind_n_humidity {
+    font-size: 1.2rem;
+  }
+}
+
 .wind_icon {
   color: blueviolet;
 }
@@ -18,13 +24,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 36%;
+  margin: 0 30%;
   width: auto;
+}
+
+@media screen and (max-width: 770px) {
+  .temp_n_weather {
+    margin: 0 20%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .temp_n_weather {
+    margin: 0 5%;
+  }
 }
 
 .min_max_temp {
   font-size: 1.25rem;
   font-weight: bolder;
+}
+
+@media screen and (max-width: 550px) {
+  .min_max_temp {
+    font-size: 1rem;
+    font-weight: bolder;
+  }
 }
 
 .max_temp {
@@ -45,11 +70,35 @@
   font-weight: bolder;
 }
 
+@media screen and (max-width: 550px) {
+  .weather p {
+    font-size: 1.25rem;
+  }
+}
+
 .more {
   margin: 0 38%;
+}
+
+@media screen and (max-width: 770px) {
+  .more {
+    margin: 0 28%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .more {
+    margin: 0 20%;
+  }
 }
 
 .more p {
   font-size: 1.25rem;
   font-family: cursive;
+}
+
+@media screen and (max-width: 770px) {
+  .more p {
+    font-size: 1rem;
+  }
 }
